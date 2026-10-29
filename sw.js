@@ -1,4 +1,4 @@
-const CACHE = 'gopro-hub-v2';
+const CACHE = 'gopro-hub-v3';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS))); });
 self.addEventListener('message', e => { if(e.data === 'SKIP_WAITING') self.skipWaiting(); });
